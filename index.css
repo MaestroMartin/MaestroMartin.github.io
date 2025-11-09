@@ -1,0 +1,247 @@
+.Container{
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* hlavní nadpis */
+h1 {
+  position: relative;       /* aby fungoval z-index */
+  z-index: 2;               /* nad obrázkem */
+  margin: 0 auto;
+  padding-top: 40px;
+  text-align: center;
+}
+
+/* obrázek za textem */
+.logo {
+  position: absolute;       /* bude pod textem */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  z-index: 1;               /* pozadí */
+  object-fit: cover;        /* vyplní oblast */
+  opacity: 0.6;             /* můžeš přidat průhlednost */
+}
+
+/* podnadpis / text pod logem */
+.text-header {
+  position: relative;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  margin-bottom: 30px;
+  z-index: 2;               /* nad obrázkem */
+}
+
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr auto;   /* vlevo search, vpravo sort */
+  grid-template-rows: auto auto;     /* druhý řádek = filtry */
+  gap: 12px 16px;
+  align-items: center;
+}
+
+/* --- SEARCH --- */
+.search-container {
+  grid-column: 1 / 1;
+  align-items: center;
+  margin-top: 160px;
+  position: relative;
+}
+
+/* search bar */
+.search-input {
+  width: 260px;
+  height: 20px;                 
+  padding: 8px 40px 8px 12px;
+  font-size: 14px;
+  background-color: #f3f3f5;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* --- SORT --- */
+.sort-container {
+  grid-column: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* --- FILTER BUTTONS --- */
+.filter-buttons {
+  grid-column: 1 / 3;      
+  display: flex;
+  justify-self: start;     
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+/* ---Sort buttons --- */
+.all {
+  margin-left: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 10px;          
+  background-color: #f3f3f5;
+  padding: 6px 10px;        
+  cursor: pointer;
+}
+
+
+.all:hover{
+    background-color: rgba(59, 53, 56, 1) ;
+    color: white;
+
+}
+
+.wall-play{
+    margin-right: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 10;
+    background-color: #f3f3f5;
+    cursor: pointer;
+
+}
+
+.wall-play:hover{
+    background-color: rgba(59, 53, 56, 1) ;
+    color: white;
+
+}
+
+.Fail-hit{
+    margin-right: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 10;
+    background-color: #f3f3f5;
+    cursor: pointer;
+
+}
+
+.Fail-hit:hover{
+    background-color: rgba(59, 53, 56, 1) ;
+    color: white;
+}
+
+.Epic-save{
+    border-radius: 5px;
+    border: none;
+    font-size: 10;
+    background-color: #f3f3f5;
+    cursor: pointer;
+
+
+}
+
+.Epic-save:hover{
+    background-color: rgba(59, 53, 56, 1) ;
+    color: white;
+
+}
+
+.sort-container select{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f3f3f5;
+    cursor: pointer;
+}
+
+/* --- VIDEO CARDS --- */
+.video-card{
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    transition: transform 0.2s box-shadow 0.2s;
+    cursor: pointer;
+    margin: 15px;
+    height: 400px;
+    width: 300px;
+}
+
+.video-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.video-thumbnail .video{
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+   
+}
+
+h3{
+    margin: 10px;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+.video-description{
+    margin: 10px;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+
+}
+
+.video-category{
+    margin: 0 10px;
+    padding-top:5px;
+    font-size: 16px;
+}
+
+.video-meta{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 10px;
+
+}
+
+.upload-date{
+    grid-column: 1/1;
+    font-size: 14px;
+    color: gray;
+}
+.views{
+    grid-column: 2/1;
+    margin-top: 10px;
+    font-size: 16px;
+    color: gray;
+}
+
+.author{
+    grid-column: 1/3;
+    font-size: 16px;
+    color: gray;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.stars{
+    grid-column: 1/3;
+    font-size: 16px;
+    color: gray;
+    margin-top: 10px;
+    text-align: center;
+}
