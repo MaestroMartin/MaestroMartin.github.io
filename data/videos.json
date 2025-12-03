@@ -1,0 +1,23 @@
+[{
+    "video_id": "1245789",
+    "link": "https://www.youtube.com/embed/iC327yed2cg?si=0mP0fY4pkcjcseeU",
+    "author": "author",
+    "title": " the beauty of fail",
+    "description": "Exploring how failure can lead to success.",
+    "tags": ["motivation", "success", "failure"],
+    "rating": {
+        "likes": 1500,
+        "count": 45
+    }},
+{
+    "video_id": "9876543",
+    "link": "https://www.youtube.com/embed/iC327yed2cg?si=0mP0fY4pkcjcseeU",
+    "author": "author",
+    "title": " the art of success",
+    "description": "Mastering the strategies for success.",
+    "tags": ["success", "strategy"],
+    "rating": {
+        "likes": 2000,
+        "count": 60
+    }
+}]
