@@ -283,7 +283,7 @@ h1 {
 .upload-date {
     grid-column: 1 / 2;
     font-size: 14px;
-    color: gray;
+    color: black;
 }
 
 
@@ -291,7 +291,7 @@ h1 {
     grid-column: 2 / 3;
     margin-top: 0;
     font-size: 14px;
-    color: gray;
+    color: black;
     text-align: right;
 }
 
@@ -299,7 +299,7 @@ h1 {
 .author {
     grid-column: 1 / 3;
     font-size: 14px;
-    color: gray;
+    color: black;
     margin-top: 8px;
     text-align: center;
 }
@@ -311,7 +311,7 @@ h1 {
 }
 
 .rating-form {
-    text-align: center;
+    text-align: block;
     margin-top: 10px;
 }
 
@@ -333,9 +333,18 @@ h1 {
   cursor: pointer;
 }
 
-/* vybrané hvězdy + hover efekt */
+
 .rating-input input:checked ~ label,
 .rating-input label:hover,
 .rating-input label:hover ~ label {
   color: #f5b301;
+}
+
+.average-rating{
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    margin-left: 10px;
 }

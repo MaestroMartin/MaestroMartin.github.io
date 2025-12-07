@@ -15,6 +15,10 @@ async function loadVideos() {
         let html = '';
         /* render video HTML*/
         videos.forEach(video => {
+            const voted = video.rating.voted;
+            const count = video.rating.count;
+
+            const average = count ? (voted / count).toFixed(1) : 0; // např. 4.3
             html += `
             <div class="video-card-info">
                 <div class="video-thumbnail">
@@ -57,6 +61,7 @@ async function loadVideos() {
                                     <label for="star1">★</label>
                             </div>
                         </form>
+                        <span class="average-rating">${average}</span>
                     </div>
                 </div>
             </div>
@@ -91,3 +96,4 @@ document.querySelectorAll('.rating-form').forEach(form => {
   
   });
 });
+
