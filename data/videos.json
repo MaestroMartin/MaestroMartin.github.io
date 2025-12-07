@@ -4,20 +4,25 @@
     "author": "author",
     "title": " the beauty of fail",
     "description": "Exploring how failure can lead to success.",
-    "tags": ["motivation", "success", "failure"],
+    "tags": ["Epic save", "Fail hit", "Wall play"],
     "rating": {
         "likes": 1500,
         "count": 45
-    }},
+    },
+     "upload_date": "2023-10-15",
+    "views": 500
+},
 {
     "video_id": "9876543",
     "link": "https://www.youtube.com/embed/iC327yed2cg?si=0mP0fY4pkcjcseeU",
     "author": "author",
     "title": " the art of success",
     "description": "Mastering the strategies for success.",
-    "tags": ["success", "strategy"],
+    "tags": ["Wall play", "Fail hit"],
     "rating": {
         "likes": 2000,
         "count": 60
-    }
+        },
+    "upload_date": "2023-10-15",
+    "views": 50000
 }]

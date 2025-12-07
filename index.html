@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)">
     <title>main</title>
 </head>
 <body>
     <div class="container">
-        <img class="logo" src="png/blue-car.jpg" alt="Rocket League Logo">
+        
         <div class="Header">
+            <div class="Header-overlay"></div>
             <h1>Rocket league Fails and Bests plays</h1>
             <p class="text-header">Epic plays and fails you will see on these web</p>
+          
         </div>
 
         <div class="controls">
@@ -25,11 +28,11 @@
                 <button class="Epic-save">Epic save</button>
             </div>
             <div class="sort-container">
-                <select class="sort-select" id="sort-select">
-                    <option value="uploadDate">Upload Date</option>
-                    <option value="title">Title</option>
-                    <option value="rating">Most Viewed</option>
-                    <option value="views">Views</option>
+                <select class="sort-items" id="sort-select">
+                    <option value="uploadDate" class="sort-select">Upload Date</option>
+                    <option value="title"class="sort-select">Title</option>
+                    <option value="rating"class="sort-select">Most Viewed</option>
+                    <option value="views"class="sort-select">Views</option>
                 </select>
                 <button class="sort-order-btn">
                     <img src="png/transfer.png" alt="icon">

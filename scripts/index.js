@@ -1,6 +1,5 @@
 
-
-
+/* Script to load JSON file */
 async function loadVideos() {
     try {
         const response = await fetch('/data/videos.json');
@@ -14,7 +13,7 @@ async function loadVideos() {
     const container = document.querySelector('.js-videos')
 
     let html = '';
-
+    /* render video HTML*/ 
     videos.forEach(video => {
         html += `
             <div class="video-card-info">
@@ -31,10 +30,14 @@ async function loadVideos() {
                         <h3>${video.title}</h3>
                         <p class="video-description">${video.description}</p>
                     </div>
-                    <span class="video category">${video.tags}</span>
+                    <div class="video-category">
+                        ${video.tags
+                        .map(tag => `<span class="video-tag">${tag}</span>`)
+                        .join('')}
+                    </div>
                     <div class="video-meta">
                         <span class="upload-date">Upload Date: </span>
-                        <span class="views">Views: </span>
+                        <span class="views">Views:${video.views} </span>
                         <span class="author">${video.author}</span>
                         <span class="stars"> Stars there wanna be</span>
                     </div>
