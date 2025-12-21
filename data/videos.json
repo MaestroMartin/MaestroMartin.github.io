@@ -4,7 +4,7 @@
     "author": "author",
     "title": " the beauty of fail",
     "description": "Exploring how failure can lead to success.",
-    "tags": ["Epic save", "Fail hit", "Wall play"],
+    "tags": ["Epic-save", "Fail-hit", "Wall-play"],
     "rating": {
         "voted": 1500,
         "count": 450
@@ -18,7 +18,7 @@
     "author": "author",
     "title": " the art of success",
     "description": "Mastering the strategies for success.",
-    "tags": ["Wall play", "Fail hit"],
+    "tags": ["Wall-play", "Fail-hit"],
     "rating": {
         "voted": 2000,
         "count": 6000

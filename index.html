@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)">
     <title>main</title>
-</head>
-<body>
-    <div class="container">
-        
-        <div class="Header">
-            <div class="Header-overlay"></div>
-            <h1>Rocket league Fails and Bests plays</h1>
-            <p class="text-header">Epic plays and fails you will see on these web</p>
-          
-        </div>
+  </head>
 
-        <div class="controls">
-            <div class="search-container">
-                <input class="search-input" type="text" id="search-input" placeholder="Search Rocket League videos...">
-            </div>
-            <div class="filter-buttons">
-                <button class="all">All</button>
-                <button class="wall-play">Wall play</button>
-                <button class="Fail-hit">Fail hit</button>
-                <button class="Epic-save">Epic save</button>
-            </div>
-            <div class="sort-container">
-                <select class="sort-items" id="sort-select">
-                    <option value="uploadDate" class="sort-select">Upload Date</option>
-                    <option value="title"class="sort-select">Title</option>
-                    <option value="rating"class="sort-select">Most Viewed</option>
-                    <option value="views"class="sort-select">Views</option>
-                </select>
-                <button class="sort-order-btn">
-                    <img src="png/transfer.png" alt="icon">
-                </button>
-            </div>
+  <body>
+    <div class="container">
+      <div class="Header">
+        <div class="Header-overlay"></div>
+        <h1>Rocket league Fails and Bests plays</h1>
+        <p class="text-header">Epic plays and fails you will see on these web</p>
+      </div>
+      <!-- first line- search input and login button -->
+      <div class="controls">
+        <div class="search-container">
+          <input class="search-input" type="text" id="search-input" placeholder="Search Rocket League videos...">
         </div>
-        <div class="video-card js-videos">
-        </div>   
+        <button class="login-btn js-open-login">login</button>
+      <!-- second line button on filter -->
+        <div class="filter-buttons">
+          <button class="filter-btn" data-tag="all">All</button>
+          <button class="filter-btn" data-tag="wall-play">Wall play</button>
+          <button class="filter-btn" data-tag="fail-hit">Fail hit</button>
+          <button class="filter-btn" data-tag="epic-save">Epic save</button>
+        </div>
+      <!-- second line on right, sort button -->
+        <div class="sort-container">
+          <select class="sort-items" id="sort-select">
+            <option value="uploadDate" class="sort-select">Upload Date</option>
+            <option value="title" class="sort-select">Title</option>
+            <option value="rating" class="sort-select">Most Viewed</option>
+            <option value="views" class="sort-select">Views</option>
+          </select>
+          <button class="sort-order-btn">
+            <img src="png/transfer.png" alt="icon">
+          </button>
+        </div>
+      </div>
+      <!-- div class on print all videos -->
+      <div class="video-card js-videos">
+      </div>
+      <!-- login form -->
+      <div class="login-overlay js-login-overlay">
+        <div class="logining">
+          <div class="open-login">
+            <button class="btn-close-login js-close-login">x</button>
+            <form class="login-form">
+              <label for="user">Username:
+                <input type="text" name="Username" required role="alertdialog" placeholder="enter your username ...">
+              </label>
+              <label for="">
+                pasword:
+                <input type="password" required role="alertdialog" placeholder="enter your password ...">
+              </label>
+              <button type="submit" class="btn-submit" >Sign-in</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-    <script type="module" src="/scripts/index.js"></script>
-</body>
+  </body>
+  <script type="module" src="/scripts/index.js"></script>
 </html>
