@@ -99,6 +99,7 @@ body {
   gap: 6px;
   margin-top: 8px;
   margin-right: 0;
+  transition: none;
 }
 
 .sort-items {
@@ -131,6 +132,11 @@ body {
   height: auto;
   margin: 8px 0;
   border-radius: 10px;
+}
+
+.video-card-info:hover {
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
 }
 
 /* left side – video */
