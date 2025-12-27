@@ -1,4 +1,3 @@
-/* ====== ZÁKLAD PRO MOBILY ====== */
 
 * {
     margin: 0;
@@ -126,7 +125,7 @@ body {
 .video-card-info {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch;
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -134,7 +133,7 @@ body {
   border-radius: 10px;
 }
 
-/* levá část – video */
+/* left side – video */
 .video-thumbnail {
   flex: 0 0 40%;
 }
@@ -142,11 +141,11 @@ body {
 .video-thumbnail .video {
   width: 100%;
   height: 100%;
-  border-radius: 10px 0 0 10px; /* opraveno 10px */
+  border-radius: 10px 0 0 10px; 
   display: block;
 }
 
-/* pravá část – text */
+/* right side – text */
 .video-content {
   flex: 1;
   padding: 8px;
@@ -164,7 +163,7 @@ body {
   text-align: left;
 }
 
-/* ====== TAGY ====== */
+/* ====== TAGS ====== */
 
 .video-category,
 .video-tags {
@@ -182,7 +181,7 @@ body {
   background-color: #f3f3f5;
 }
 
-/* ====== META INFORMACE (views, author, rating) ====== */
+/* ====== META  information (views, author, rating) ====== */
 
 .video-meta {
   margin-top: 4px;
@@ -212,7 +211,7 @@ body {
   font-size: 12px;
 }
 
-/* ====== HVĚZDIČKOVÝ RATING ====== */
+/* ====== star RATING ====== */
 
 .rating-input {
   display: inline-flex;
@@ -231,7 +230,7 @@ body {
   cursor: pointer;
 }
 
-/* barvení hvězdiček */
+/* star color */
 .rating-input input:checked ~ label,
 .rating-input label:hover,
 .rating-input label:hover ~ label {
