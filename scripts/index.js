@@ -30,8 +30,17 @@ function renderVideos(videos) {
     const count = video.rating.count;
     const average = count ? (voted / count).toFixed(1) : 0;
 
+    // normalizované tagy pro filtrování ("Wall play" -> "wall-play")
+    const normTags = (video.tags || []).map(t =>
+      t.toLowerCase().replace(/\s+/g, '-')
+    );
+
+    const upload = new Date(video.uploadDate);
+    const formattedDate = isNaN(upload.getTime())? '': upload.toLocaleDateString('cs-CZ');
+
+
     html += `
-      <div class="video-card-info">
+      <div class="video-card-info" data-tags="${normTags.join(',')}">
         <div class="video-thumbnail">
           <iframe class="video" src="${video.link}" 
             frameborder="0" 
@@ -46,10 +55,14 @@ function renderVideos(videos) {
             <p class="video-description">${video.description}</p>
           </div>
           <div class="video-category">
-            ${video.tags.map(tag => `<span class="video-tag">${tag}</span>`).join('')}
+            ${video.tags
+              .map((tag, index) =>
+                `<span class="video-tag" data-tag="${normTags[index]}">${tag}</span>`
+              )
+              .join('')}
           </div>
           <div class="video-meta">
-            <span class="upload-date">Upload Date: </span>
+            <span class="upload-date">Upload Date:  ${formattedDate} </span>
             <span class="views">Views: ${video.views}</span>
             <span class="author">${video.author}</span>
             <form class="rating-form" data-video-id="${video.video_id}">
@@ -101,27 +114,28 @@ function initRatingForms() {
 
 
 function initFilterButtons() {
-  const buttons = document.querySelectorAll('.filter-btn');
+  const triggers = document.querySelectorAll('[data-tag]'); // tlačítka i tagy
+  const cards = document.querySelectorAll('.video-card-info');
 
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const tag = btn.dataset.tag;
+  triggers.forEach(el => {
+    el.addEventListener('click', () => {
+      const tag = el.dataset.tag; // už je normalizovaný (wall-play, fail-hit, ...)
 
-      let filteredVideos;
-      if (tag === 'all') {
-        filteredVideos = allVideos;
-      } else {
-        filteredVideos = allVideos.filter(video =>
-          Array.isArray(video.tags) &&
-          video.tags.some(t => t.toLowerCase() === tag.toLowerCase())
-        );
-      }
+      cards.forEach(card => {
+        const tagsAttr = card.dataset.tags || '';  // např. "wall-play,fail-hit"
 
-      renderVideos(filteredVideos);
-      initRatingForms();   // after render, connect stars
+        const matches =
+          tag === 'all' ||
+          tagsAttr.split(',').some(t => t.trim() === tag);
+
+        card.style.display = matches ? '' : 'none';
+      });
     });
   });
 }
+
+
+
 /* ====== Pop up login window ====== */
 const loginModal = document.querySelector('.js-login-overlay');
 const openLoginBtn = document.querySelector('.js-open-login');

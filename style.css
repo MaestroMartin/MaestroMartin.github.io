@@ -15,7 +15,7 @@
     
     position: relative;
     text-align: center;
-    height: 300px;
+    height: 360px;
     background-size: cover;
     background-position: cover;
     background: url('png/blue-car.png') center/cover no-repeat ;
@@ -24,7 +24,7 @@
 .Header-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.4); 
+  background: rgba(255, 255, 255, 0.4); /* bílý závoj, 0.4 = průhlednost */
 }  
 
 h1 {
@@ -39,7 +39,7 @@ h1 {
 .text-header {
     position: relative;
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
     color: black;
     margin-bottom: 30px;
     z-index: 2;
@@ -95,6 +95,7 @@ h1 {
   background-color: #3b3538;
   color: #fff;
   cursor: pointer;
+  margin-right: 20px;
 }
 
 .sort-order-btn {
@@ -104,6 +105,7 @@ h1 {
     margin-top: 10px;
     background-color: #f3f3f5;
     padding: 5px;
+    margin-right: 20px;
 }
 
 .sort-container .sort-items{
@@ -141,6 +143,53 @@ h1 {
 
 
 .filter-btn:hover {
+    background-color: rgba(59, 53, 56, 1);
+    color: white;
+
+}
+
+.wall-play {
+    margin-right: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    background-color: #f3f3f5;
+    cursor: pointer;
+
+}
+
+.wall-play:hover {
+    background-color: rgba(59, 53, 56, 1);
+    color: white;
+
+}
+
+.Fail-hit {
+    margin-right: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    background-color: #f3f3f5;
+    cursor: pointer;
+
+}
+
+.Fail-hit:hover {
+    background-color: rgba(59, 53, 56, 1);
+    color: white;
+}
+
+.Epic-save {
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    background-color: #f3f3f5;
+    cursor: pointer;
+
+
+}
+
+.Epic-save:hover {
     background-color: rgba(59, 53, 56, 1);
     color: white;
 
@@ -316,7 +365,7 @@ h1 {
 }
 
 
-/* Layout outside login window */
+/* Layout outside window */
 .login-overlay {
   position: fixed;
   inset: 0;

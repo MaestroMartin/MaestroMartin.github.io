@@ -9,7 +9,7 @@
         "voted": 1500,
         "count": 450
     },
-     "upload_date": "2023-10-15",
+     "uploadDate": "2023-10-15",
     "views": 500
 },
 {
@@ -23,6 +23,6 @@
         "voted": 2000,
         "count": 6000
         },
-    "upload_date": "2023-10-15",
+    "uploadDate": "2023-11-23",
     "views": 50000
 }]
